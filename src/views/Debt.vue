@@ -19,7 +19,7 @@
             <tr v-for="(debt,i) in debts" :key="debt.id">
                 <td class="px-6 py-4 border-b border-gray-200 text-md">{{ i }}</td>
                 <td class="px-6 py-4 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ debt.customer_name }}</span></td>
-                <td class="px-6 py-4 text-red-400 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ debt.total_amount }}</span></td>
+                <td class="px-6 py-4 text-red-500 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ debt.total_amount }}</span></td>
                
                 <td class="px-6 py-4 text-sm font-medium border-b border-gray-200">
                   <div class="inline-flex items-center rounded-md shadow-sm">

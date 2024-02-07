@@ -64,9 +64,9 @@ export default {
         },
 
         async createDebt(){
-            await axios.post('/debt',  this.debt ).then((data)=> {
-                this.$toast.success("succesfully registered user");
-                this.$route.push('/customer')
+            await axios.post('/debts',  this.debt ).then((data)=> {
+                this.$toast.success("succesfully added debt");
+                this.$router.push('/debt')
             }).catch((err)=> {
                 this.$toast.error(err);
             });

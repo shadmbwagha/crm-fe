@@ -3,7 +3,7 @@
     <div class="flex items-center max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg">
         
         <div class="w-full p-8 ">
-            <h2 class="text-2xl font-semibold text-center text-blue-700">DIT - ADMS</h2>
+            <h2 class="text-2xl font-semibold text-center text-green-700">Customer RM MS</h2>
             
             <form @submit.prevent='handleLogin()'>
                 <div class="mt-4">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="mt-8">
                 <div class="mt-12">
-                    <button class="w-full px-4 py-2 font-bold text-white bg-blue-700 rounded " type="submit">Login</button>
+                    <button class="w-full px-4 py-2 font-bold text-white bg-green-700 rounded " type="submit">Login</button>
                 </div>
                 </div>
             </form>

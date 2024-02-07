@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-end py-4 space-x-8 md:mx-10">
-        <router-link to="/customerForm">
-            <button class="px-4 py-2 text-white bg-green-500 rounded-lg tex-md">+ Add Customer</button>
+        <router-link to="/creditForm">
+            <button class="px-4 py-2 text-white bg-green-500 rounded-lg tex-md">+ Add Credit</button>
         </router-link>
     </div>
     
@@ -11,24 +11,19 @@
             <tr class="bg-gray-100">
                 <th class="w-1/12 px-6 py-4 font-bold text-left text-gray-900 uppercase">sn</th>
                 <th class="w-1/4 px-6 py-4 font-bold text-left text-gray-900 uppercase">Customer Name</th>
-                <th class="w-1/6 px-6 py-4 font-bold text-left text-gray-900 uppercase">Adress</th>
-                <th class="w-1/4 px-6 py-4 font-bold text-left text-gray-900 uppercase">contact</th>
-                <th class="w-1/6 px-6 py-4 font-bold text-left text-gray-900 uppercase">Balance</th>
+                <th class="w-1/6 px-6 py-4 font-bold text-left text-gray-900 uppercase">Amount</th>
                 <th class="w-1/6 px-6 py-4 font-bold text-left text-gray-900 uppercase">Action</th>
             </tr>
         </thead>
         <tbody class="bg-white">
-            <tr v-for="(customer,i) in customers" :key="customer.id">
-                <td class="px-6 py-4 border-b border-gray-200 text-md">{{ i+1 }}</td>
-                <td class="px-6 py-4 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ customer.name }}</span></td>
-                <td class="px-6 py-4 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ customer.address }}</span></td>
-                <td class="px-6 py-4 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ customer.contact }}</span></td>
-                <td class="px-6 py-4 text-sm border-b border-gray-200" >
-                    <span class="px-2 py-1 text-xs text-white bg-green-500 rounded-full ">Active</span>
-                </td>
+            <tr v-for="(credit,i) in credits" :key="credit.id">
+                <td class="px-6 py-4 border-b border-gray-200 text-md">{{ i }}</td>
+                <td class="px-6 py-4 truncate border-b border-gray-200 text-md hover:text-blue-500"><span>{{ credit.customer_name }}</span></td>
+                <td class="px-6 py-4 text-green-400 truncate border-b border-gray-200 text-md hover:text-green-500"><span>{{ credit.total_amount }}</span></td>
+               
                 <td class="px-6 py-4 text-sm font-medium border-b border-gray-200">
                   <div class="inline-flex items-center rounded-md shadow-sm">
-                    <button class="inline-flex items-center px-2 py-2 space-x-1 text-sm font-medium bg-white border rounded-l-lg text-slate-800 hover:text-blue-600 hover:bg-slate-100 border-slate-200">
+                    <button class="inline-flex items-center px-2 py-2 space-x-1 text-sm font-medium bg-white border rounded-l-lg text-slate-800 hover:text-blue-600 hover:bg-slate-100 border-slate-200" >
                       <span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                               stroke="currentColor" class="w-3 h-3">
@@ -50,19 +45,18 @@ import axios from 'axios';
 export default {
     data(){
         return {
-            customers : []
+            credits : []
         }
     },
     methods: {
-        async getCustomer() {
-            await axios.get('/customers').then((data)=> {    
-                this.customers = data.data;
-                console.log(this.customers);
+        async getDebts() {
+            await axios.get('/credit').then((data)=> {    
+                this.credits = data.data;
             })
         }
     },
     mounted () {
-        this.getCustomer();
+        this.getDebts();
     }
 }
 </script>

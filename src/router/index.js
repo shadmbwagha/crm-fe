@@ -16,7 +16,7 @@ const routes = [
       { path: '/debt', component: () => import('../views/Debt.vue') },
       { path: '/debtForm', component: () => import('../components/DebtForm.vue') },
       { path: '/credits', component: () => import('../views/Credit.vue') },
-      { path: '/creditsForm', component: () => import('../components/CreditForm.vue') },
+      { path: '/creditForm', component: () => import('../components/CreditForm.vue') },
     ],
   },
   {
