@@ -13,6 +13,8 @@ const routes = [
     children: [
       { path: '/customer', component: () => import('../views/Customer.vue') },
       { path: '/customerForm', component: () => import('../components/CustomerForm.vue') },
+      { path: '/sms', component: () => import('../views/SMS.vue') },
+      { path: '/devp', component: () => import('../views/Maintainance.vue') },
       { path: '/debt', component: () => import('../views/Debt.vue') },
       { path: '/debtForm', component: () => import('../components/DebtForm.vue') },
       { path: '/credits', component: () => import('../views/Credit.vue') },

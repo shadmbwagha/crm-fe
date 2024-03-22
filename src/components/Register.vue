@@ -1,8 +1,8 @@
 <template>
   <div class="py-24">
     <div class="flex items-center max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg">
-        <form action="" @submit.prevent="registerUser">
-            <div class="w-full p-8 ">
+        <form action="" @submit.prevent="registerUser" class="w-full p-8 ">
+            
                 <h2 class="text-2xl font-semibold text-center text-green-700">Customer RMS</h2>
                 <div class="mt-4">
                     <label class="block mb-2 text-sm font-bold text-gray-700">Username</label>
@@ -34,7 +34,7 @@
                     <span class="w-1/5 text-red-400 border-b md:w-1/4">{{mesgErr}}</span>
                 </div>
                 
-            </div>
+          
         </form>
         
     </div>

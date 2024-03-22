@@ -3,7 +3,7 @@
     <div class="flex items-center max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg">
         
         <div class="w-full p-8 ">
-            <h2 class="text-2xl font-semibold text-center text-green-700">Customer RM MS</h2>
+            <h2 class="text-2xl font-semibold text-center text-green-700">Nislay Green Store CRM</h2>
             
             <form @submit.prevent='handleLogin()'>
                 <div class="mt-4">
